@@ -1,0 +1,89 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: darkslategray;
+    color: whitesmoke;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1cm;
+    padding-right: 1cm;
+}
+
+header a {
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+}
+
+header h1 {
+    margin-bottom: 0cm;
+    margin-top: 0.25cm;
+}
+
+header h3 {
+    margin-top: 0cm;
+    margin-bottom: 0.25cm;
+    margin-left: 0.5cm
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0cm;
+}
+
+textarea {
+    font-family: monospace;
+}
+
+button {
+    height: 0.75cm;
+    width: 2.5cm;
+    font-size: large;
+}
+
+.rule-head {
+    width: 5em;
+}
+
+.rule-head input {
+    font-family: monospace;
+    width: 8em;
+}
+
+.rule-head textarea {
+    resize: none
+}
+
+.rule-body {
+    width: 100%;
+    font-family: monospace;
+}
+
+#rule-container {
+    width: 25em;
+}
+
+.subheading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
