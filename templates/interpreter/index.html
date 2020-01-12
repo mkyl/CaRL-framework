@@ -21,11 +21,14 @@
             <h3>Queries</h3>
         </div>
         <table>
-            <tr><td><textarea style="font-size: larger; width: 25em; height: 3em;">Score[S] <- Prestige[A]?</textarea>
+            <tr><td>1.</td><td><textarea style="font-size: larger; width: 25em; height: 3em;">Score[S] <- Prestige[A]?</textarea>
             </td></tr>
-            <tr><td>        <textarea style="font-size: larger; width: 25em; height: 3em;">Score[S] <- Prestige[A]? WHEN LESS THAN 1/3 PEERS TREATED</textarea>
+            <tr><td>2.</td><td>        <textarea style="font-size: larger; width: 25em; height: 3em;">Score[S] <- Prestige[A]? WHEN LESS THAN 1/3 PEERS TREATED</textarea>
             </td></tr>
-            <tr><td>        <textarea style="font-size: larger; width: 25em; height: 3em;"></textarea>
+            <tr><td>3.</td><td>        <textarea style="font-size: larger; width: 25em; height: 8em;">SELECT c.blind, AVG(s.accepted)
+FROM Conferences AS c, Submissions AS s, Contributions AS ctr, Authors AS a
+WHERE c.id = s.c_id, s.id = ctr.s_id, ctr.a_id = a.id
+GROUP BY c.blind, a.prestige</textarea>
             </td></tr>
     </table>
     <button style='float: right; margin-top: 0.25cm;'>Execute</button>
@@ -33,12 +36,14 @@
     <div>
         <div class="subheading">
         <h3>Results</h3>
-        <p style="color: gray"> (2 queries executed in 23 seconds) </p>
+        <p style="color: gray"> (3 queries executed in 23 seconds) </p>
     </div>
-    <h4> Query 1 </h4>
-        <div style="background-color: coral; height: 10em; width: 25em;"></div>
-        <h4> Query 2</h4>
-        <div style="background-color: pink; height: 10em; width: 25em;"></div>
+    <h4> Causal Query 1 </h4>
+        <img src="{% static "query 1.png" %}" style="width: 25em;"/>
+        <h4> Causal Query 2</h4>
+        <img src="{% static "query 2.png" %}" style="width: 25em;"/>
+        <h4> SQL Passthrough Query 3</h4>
+        <img src="{% static "query 3.png" %}" style="width: 25em;"/>
     </div>
 </main>
 
