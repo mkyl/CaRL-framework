@@ -32,4 +32,8 @@
     "insert into experience values ('eve', 0), ('alice', 0), ('bob', 1)")
 (query-exec sqlite
     "insert into luck values ('eve', 1), ('alice', 0), ('bob', 0)")
-(load-data m sqlite)
+
+(require graph)
+(define edges(load-data m sqlite))
+(define g (unweighted-graph/directed edges))
+(display (graphviz g))
