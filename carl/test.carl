@@ -1,3 +1,2 @@
-Mortality[X] <- SELF_PAY[X]
-
-Length[X] <- SELF_PAY[X]
+score[X] <- experience[X]
+score[X] <- luck[X]
