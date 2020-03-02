@@ -1,11 +1,24 @@
 #lang racket
 
+(struct rule (head body) #:transparent)
+
 (define (handle-model m)
-    (let* ([rules (syntax-e m)]
-           )
-      (map handle-rule rules)))
+    (let* ([datum (syntax->datum m)]
+           [rules (handle-rule datum)])
+        rules))
 (provide handle-model)
 
 (define (handle-rule r)
-    42)
-  
+    (let* ([result 
+        (cond
+        [(and (list? r) (eq? 'rule (first r))) (
+            let* ([r (rest r)]
+                [head (handle-rule (first r))]
+                [body (handle-rule (first (rest (rest r))))])
+                (rule head body))]
+        [(and (list? r) (eq? 'table (first r))) r]
+        [(and (list? r) (eq? 'variable (first r))) r]
+        [(list? r) (map handle-rule r)]
+        [else '()])]
+        [result (flatten result)])
+      result))
