@@ -1,7 +1,7 @@
 #lang racket
 
 (struct rule (head body) #:transparent)
-(provide (struct-out rule))
+(provide (struct-out rule)) 
 
 (define (handle-model m)
     (let* ([datum (syntax->datum m)]
