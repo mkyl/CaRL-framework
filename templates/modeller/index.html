@@ -16,70 +16,18 @@
 </header>
 <main>
     <div>
-<div class='subheading'> 
+<div class='subheading'>
 <h2> Model Input </h2>
 <p style="color: green;"> ✅ 4 rules validated </p>
 </div>
-<table id="rule-container">
-    <tr>
-        <td class="rule-head">
-            <input type="text" value="Prestige[A]"/>
-        </td>
-        <td>
-            ⃪
-        </td>
-        <td>
-            <input class="rule-body" type="text" value="Qualification[A] WHERE Person(A)"/>
-        </td>
-    </tr>
-    <tr>
-        <td class="rule-head">
-            <input type="text" value="Quality[S]"/>
-        </td>
-        <td>
-            ⃪
-        </td>
-        <td>
-            <textarea style="resize: none;" 
-            class="rule-body" type="text">Qualification[A], Prestige[A] WHERE Author(A, S)
-            </textarea>
-        </td>
-    </tr>
-    <tr>
-        <td class="rule-head">
-            <input type="text" value="Score[S]"/>
-        </td>
-        <td>
-            ⃪
-        </td>
-        <td>
-            <input class="rule-body" type="text" value="Prestige[A], WHERE Author(A,S)"/>
-        </td>
-    </tr>
-    <tr>
-        <td class="rule-head">
-            <input type="text" value="Score[S]"/>
-        </td>
-        <td>
-            ⃪
-        </td>
-        <td>
-            <input class="rule-body" type="text" value="Quality[S] WHERE Submission(S)"/>
-        </td>
-    </tr>
-    <tr>
-        <td class="rule-head">
-            <input type="text" value=""/>
-        </td>
-        <td>
-            ⃪
-        </td>
-        <td>
-            <input class="rule-body" type="text" value=""/>
-        </td>
-    </tr>
-</table>
-<form> 
+<div name="textarea"
+   rows="10" cols="50" contenteditable="true" style="padding: 3px; border: solid grey 1px; font-family:monospace;"> <span style="color: green">Prestige</span>[<span style="color:Chocolate">A</span>] <span style="color:Firebrick"> <- </span> <span style="color:green"> Qualification</span>[<span style="color:Chocolate">A</span>] <span style="color: Firebrick"> WHERE </span> <span style="color:green">Person</span>(<span style="color:Chocolate">A</span>) <br/>
+
+<span style="color: green">Quality</span>[<span style="color: Chocolate">S</span>] <span style="color:Firebrick"> <- </span> <span style="color:green"> Qualification</span>[<span style="color:Chocolate">A</span>], <span style="color:green">Prestige</span>[<span style="color:Chocolate">A</span>] <span style="color: Firebrick"> WHERE </span> <span style="color:green">Author</span>(<span style="color:Chocolate">A</span>, <span style="color:Chocolate">S</span>) <br/>
+<span style="color:green">Score</span>[<span style="color:Chocolate">S</span>] <span style="color:Firebrick"><-</span> <span style="color:green">Prestige</span>[<span style="color:Chocolate">A</span>], <span style="color: Firebrick"> WHERE </span> <span style="color:green">Author</span>(<span style="color:Chocolate">A</span>,<span style="color:Chocolate">S</span>) <br/>
+<span style="color:green">Score</span>[<span style="color:Chocolate">S</span>] <span style="color:Firebrick"><-</span> <span style="color:green">Quality</span>[<span style="color:Chocolate">S</span>] <span style="color: Firebrick"> WHERE </span> <span style="color:green">Submission</span>(<span style="color:Chocolate">S</span>) <br/> <br/> <br/>
+</div>
+<form>
 <button style="float: right; margin-top: 0.25cm;"> Next </button>
 </form>
 </div></div>
