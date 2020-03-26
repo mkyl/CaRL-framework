@@ -21,11 +21,14 @@
 <p style="color: green;"> ✅ 4 rules validated </p>
 </div>
 <div name="textarea"
-   rows="10" cols="50" contenteditable="true" style="padding: 3px; border: solid grey 1px; font-family:monospace; width: 30em;"> <span style="color: green">Prestige</span>[<span style="color:Chocolate">A</span>] <span style="color:Firebrick"> <- </span> <span style="color:green"> Qualification</span>[<span style="color:Chocolate">A</span>] <span style="color: Firebrick"> WHERE </span> <span style="color:green">Person</span>(<span style="color:Chocolate">A</span>) <br/>
+   rows="10" cols="50" contenteditable="true" style="padding: 3px; border: solid grey 1px; font-family:monospace; width: 30em;">
 
-<span style="color: green">Quality</span>[<span style="color: Chocolate">S</span>] <span style="color:Firebrick"> <- </span> <span style="color:green"> Qualification</span>[<span style="color:Chocolate">A</span>], <span style="color:green">Prestige</span>[<span style="color:Chocolate">A</span>] <span style="color: Firebrick"> WHERE </span> <span style="color:green">Author</span>(<span style="color:Chocolate">A</span>, <span style="color:Chocolate">S</span>) <br/>
-<span style="color:green">Score</span>[<span style="color:Chocolate">S</span>] <span style="color:Firebrick"><-</span> <span style="color:green">Prestige</span>[<span style="color:Chocolate">A</span>], <span style="color: Firebrick"> WHERE </span> <span style="color:green">Author</span>(<span style="color:Chocolate">A</span>,<span style="color:Chocolate">S</span>) <br/>
-<span style="color:green">Score</span>[<span style="color:Chocolate">S</span>] <span style="color:Firebrick"><-</span> <span style="color:green">Quality</span>[<span style="color:Chocolate">S</span>] <span style="color: Firebrick"> WHERE </span> <span style="color:green">Submission</span>(<span style="color:Chocolate">S</span>) <br/> <br/> <br/>
+<span style="color: green">Bill</span>[<span style="color: Chocolate">P</span>] <span style="color:Firebrick"> <- </span> <span style="color: green">Illness_Severity</span>[<span style="color: Chocolate">P</span>] <br>
+<span style="color: green">Bill</span>[<span style="color: Chocolate">P</span>] <span style="color:Firebrick"> <- </span> <span style="color: green">Private_Ownership</span>[<span style="color: Chocolate">H</span>] <span style="color: Firebrick"> WHERE </span> <span style="color: green">Admitted</span>(<span style="color: Chocolate">P</span>, <span style="color: Chocolate">H</span>) <br>
+<span style="color: green">Bill</span>[<span style="color: Chocolate">P</span>] <span style="color:Firebrick"> <- </span> <span style="color: green">Surgery_Performed</span>[<span style="color: Chocolate">P</span>] <br>
+<span style="color: green">Admitted_to_Large</span>[<span style="color: Chocolate">P</span>] <span style="color:Firebrick"> <- </span> <span style="color: green">Illness_Severity</span>[<span style="color: Chocolate">P</span>] <br>
+
+<br/> <br/> <br/>
 </div>
 <form>
 <button style="float: right; margin-top: 0.25cm;"> Next </button>
@@ -34,9 +37,9 @@
 <div>
     <div class="subheading">
 <h2> Preview </h2>
-<p style="color: grey;"> (+1 204 nodes not shown) </p>
+<p style="color: grey;"> (~8 million nodes not shown) </p>
 </div>
-<img style="width: 400px; border: grey 1px solid;" src="{% static "grounding.png" %}"/>
+<div style="width: 300px; border: grey 1px solid; font-size: x-large; display: flex; justify-content: center; text-align: center; height: 200px; align-items: center;"> Preview Hidden to <br/> Protect Patient Privacy </div>
 </div>
 </main>
 <hr/>
