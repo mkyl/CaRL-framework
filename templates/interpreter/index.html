@@ -19,32 +19,38 @@
     <div>
         <div class="subheading">
             <h3>Queries</h3>
+            <p style="color: gray"> (3 queries executed in 23 seconds) </p>
         </div>
         <table>
             <tr><td>1.</td><td><textarea style="font-size: larger; width: 25em; height: 3em;">Score[S] <- Prestige[A]? GROUP BY Blinding</textarea>
             </td></tr>
+            <tr><td> </td> <td> <img src="{% static "query 1.png" %}" style="width: 25em;"/> </td></tr>
             <tr><td>2.</td><td>        <textarea style="font-size: larger; width: 25em; height: 3em;">Score[S] <- Prestige[A]? WHEN LESS THAN 1/3 PEERS TREATED GROUP BY Blinding</textarea>
             </td></tr>
+            <tr><td> </td> <td> <img src="{% static "query 2.png" %}" style="width: 25em;"/> </td></tr>
             <tr><td>3.</td><td>        <textarea style="font-size: larger; width: 25em; height: 8em;">SELECT c.blind, AVG(s.accepted)
 FROM Conferences AS c, Submissions AS s, Contributions AS ctr, Authors AS a
 WHERE c.id = s.c_id, s.id = ctr.s_id, ctr.a_id = a.id
 GROUP BY c.blind, a.prestige</textarea>
             </td></tr>
+            <tr><td> </td> <td> <img src="{% static "query 3.png" %}" style="width: 25em;"/> </td></tr>
     </table>
-    <button style='float: right; margin-top: 0.25cm;'>Execute</button>
+    <button style='float: right; margin-top: 0.25cm;'>Add Query</button>
     </div>
+    <!--
     <div>
         <div class="subheading">
         <h3>Results</h3>
         <p style="color: gray"> (3 queries executed in 23 seconds) </p>
     </div>
     <h4> Causal Query 1 </h4>
-        <img src="{% static "query 1.png" %}" style="width: 25em;"/>
+
         <h4> Causal Query 2</h4>
         <img src="{% static "query 2.png" %}" style="width: 25em;"/>
         <h4> SQL Passthrough Query 3</h4>
         <img src="{% static "query 3.png" %}" style="width: 25em;"/>
     </div>
+      -->
 </main>
 
 <hr/>
